@@ -6,11 +6,13 @@
 </head>
 <body>
 <table>
-    <thead><th>Id</th><th>Name</th></thead>
+    <thead><th>Id</th><th>Name</th><th>Password</th></thead>
     {{range . }}
     <tr>
         <td>{{.Id}}</td>
         <td>{{.Name}}</td>
+        <td>{{.Password}}</td>
+
     </tr>
     {{end}}
 </table>

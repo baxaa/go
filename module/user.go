@@ -1,7 +1,8 @@
-package module
+package main
 
-type User struct {
-	Name     string `json:"name"`
-	Id       int    `json:"id"`
-	password string `json:"password"`
+import "fmt"
+
+func man() {
+	var a int
+	fmt.Print(a)
 }

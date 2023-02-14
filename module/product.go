@@ -1,4 +1,4 @@
-package module
+package main
 
 type Product struct {
 	Name    string `json:"name"`
