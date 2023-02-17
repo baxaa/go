@@ -16,7 +16,7 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, "Hello, Http\n")
 }
 
-func main() {
+func test() {
 	http.HandleFunc("/root", getroot)
 	http.HandleFunc("/hello", getHello)
 
