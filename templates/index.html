@@ -2,17 +2,16 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Products</title>
+    <title>Users</title>
 </head>
 <body>
 <table>
-    <thead><th>Id</th><th>Name</th><th>Password</th></thead>
+    <thead><th>Name</th><th>Id</th><th>Password</th></thead>
     {{range . }}
     <tr>
-        <td>{{.Id}}</td>
         <td>{{.Name}}</td>
-        <td>{{.Password}}</td>
-
+        <td>{{.Id}}</td>
+        <td>{{.Pass}}</td>
     </tr>
     {{end}}
 </table>

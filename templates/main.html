@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MyProject</title>
+        <style>
+            .header {
+                position: relative;
+                left: 400px;
+            }
+            .input {
+                width: 300px;
+            }
+            .search {
+                position: relative;
+                top: 3px;
+                height: 20px;
+                width: 30px;
+            }
+            .filter {
+                position: relative;
+                top: 3px;
+                height: 20px;
+                width: 30px;
+            }
+            .add {
+                position: relative;
+                top: 3px;
+                height: 20px;
+                width: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="header">
+            <h1>Welcome to my website</h1>
+            <form method="POST" action="/search">
+                <input class="input" type="text" name="name" placeholder="name of product">
+                <button type="submit" class="search"></button>
+            </form>
+        </div> -->
+        <ul class="products">
+            {{range .}}
+                <li>
+                    Name : {{.Name}} <br>
+                    Model : {{.Model}} <br>
+                    Price : {{.Price}}
+                </li>
+                <br>
+            {{end}}
+        </ul>
+        <!-- <div>
+            <form method="POST" action="/filter">
+                <label>From:</label>
+                <input type="number" name="firstNum">
+                <label>To:</label>
+                <input type="number" name="secondNum">
+                <button type="submit" class="filter"></button>
+            </form>
+        </div> -->
+        <div>
+            <form method="POST" action="/addProduct">
+                <button type="submit" class="add">Add</button>
+            </form>
+        </div>
+    </body>
+</html>
