@@ -31,13 +31,13 @@
         </style>
     </head>
     <body>
-        <!-- <div class="header">
+        <div class="header">
             <h1>Welcome to my website</h1>
             <form method="POST" action="/search">
                 <input class="input" type="text" name="name" placeholder="name of product">
                 <button type="submit" class="search"></button>
             </form>
-        </div> -->
+        </div>
         <ul class="products">
             {{range .}}
                 <li>
@@ -48,7 +48,7 @@
                 <br>
             {{end}}
         </ul>
-        <!-- <div>
+        <div>
             <form method="POST" action="/filter">
                 <label>From:</label>
                 <input type="number" name="firstNum">
@@ -56,9 +56,9 @@
                 <input type="number" name="secondNum">
                 <button type="submit" class="filter"></button>
             </form>
-        </div> -->
+        </div>
         <div>
-            <form method="POST" action="/addProduct">
+            <form method="POST" action="/add">
                 <button type="submit" class="add">Add</button>
             </form>
         </div>
