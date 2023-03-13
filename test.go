@@ -16,12 +16,17 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, "Hello, Http\n")
 }
 
-func test() {
-	http.HandleFunc("/root", getroot)
-	http.HandleFunc("/hello", getHello)
+func main() {
+	//http.HandleFunc("/root", getroot)
+	//http.HandleFunc("/hello", getHello)
+	//
+	//err := http.ListenAndServe(":8080", nil)
+	//if err != nil {
+	//	return
+	//}
+	var arr [5]int
+	for i := 0; i < len(arr); i++ {
+		fmt.Println(arr[i])
 
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		return
 	}
 }
