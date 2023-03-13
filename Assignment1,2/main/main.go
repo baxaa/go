@@ -5,6 +5,7 @@ import (
 )
 
 //const (
+
 //	user     = "postgres"
 //	password = "uhupup667"
 //	dbname   = "go"
