@@ -1,0 +1,64 @@
+#version: '3.9'
+#services:
+#  assignment3:
+#    container_name: golang_container
+#    environment:
+#      - DB_URL=db:5432
+#    build: ./
+#    ports:
+#      - 8000:8080
+##    depends_on:
+##      - postgres
+#    networks:
+#      - learning
+#    command:
+#      - ./Assignment3
+##  postgres:
+##    restart: always
+##    image: postgres:latest
+##    container_name: postgres_container
+##    environment:
+##      - POSTGRES_USER=${DB_USER}
+##      - POSTGRES_PASSWORD=${DB_PASSWORD}
+##      - POSTGRES_DB=${DB_NAME}
+##      - DATABASE_HOST=${DB_HOST}
+##    ports:
+##      - 5432-5432
+##    networks:
+##      - learning
+##
+#
+#
+#
+
+
+version: '3.9'
+services:
+  db:
+    restart: always
+    image: postgres:15
+    volumes:
+      - //c/Program Files/PostgreSQL/15/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: uhupup667
+      POSTGRES_DB: books
+      POSTGRES_HOST: db
+    ports:
+      - 5432:5432
+    networks:
+      - learning
+  assignment3:
+    build: ./
+    command: ./Assignment3
+    ports:
+      - 8080:8080
+    environment:
+      - DB_URL=db:5432
+    networks:
+      - learning
+
+networks:
+  learning:
+#    external: true
+    driver: bridge

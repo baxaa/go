@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	db.DatabaseConnection()
 	db.DB.AutoMigrate(model.Book{})
+	db.DatabaseConnection()
 	Router.Routes()
 }

@@ -1,20 +1,13 @@
-# Use an official Golang runtime as a parent image
 FROM golang:latest
 
-# Set the working directory to /app
-WORKDIR /app
+WORKDIR /assignment3
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+COPY . /assignment3
 
-# Download dependencies
 RUN go mod download
 
-# Build the Go app
-RUN go build -o main .
+RUN go build -o Assignment3 ./main.go
 
-# Expose port 8080 for the container
 EXPOSE 8080
 
-# Run the Go app when the container starts
-CMD ["/app/main"]
+CMD ["./assignment3"]
